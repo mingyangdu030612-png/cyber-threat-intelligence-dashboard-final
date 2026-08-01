@@ -1,0 +1,36 @@
+# ---- Terraform ----
+# Local .terraform cache and provider binaries (large, machine-specific)
+.terraform/
+# Terraform state (contains AWS account/resource details, never commit)
+*.tfstate
+*.tfstate.*
+# Plan output / crash logs
+*.tfplan
+crash.log
+crash.*.log
+# Local variable overrides that may contain secrets
+*.auto.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ---- Lambda build artifact ----
+# Rebuilt locally from lambda_function.py via Compress-Archive / zip
+lambda.zip
+*.zip
+
+# ---- AWS / credentials ----
+.aws/
+*.pem
+credentials
+
+# ---- Python ----
+__pycache__/
+*.pyc
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

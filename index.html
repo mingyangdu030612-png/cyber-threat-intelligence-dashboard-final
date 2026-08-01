@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Threat Intelligence Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-icon">&#128737;</span>
+        <div>
+          <h1>Cyber Threat Intelligence Dashboard</h1>
+          <p class="subtitle">Live cybersecurity news via AWS Lambda + API Gateway</p>
+        </div>
+      </div>
+      <button id="refreshBtn" class="refresh-btn">
+        <span id="refreshIcon" class="refresh-icon">&#8635;</span>
+        <span>Refresh News</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="content">
+    <p id="statusLine" class="status-line" hidden></p>
+
+    <div id="loadingState" class="loading-state" hidden>
+      <div class="spinner"></div>
+      <p>Fetching latest threat intelligence&hellip;</p>
+    </div>
+
+    <div id="errorState" class="error-state" hidden>
+      <p class="error-title">&#9888; Unable to load news</p>
+      <p id="errorMessage" class="error-message"></p>
+    </div>
+
+    <section id="newsGrid" class="news-grid"></section>
+  </main>
+
+  <footer class="footer">
+    <p>AWS Academy Capstone Project &mdash; Cyber Threat Intelligence Dashboard</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
